@@ -1,0 +1,26 @@
+{% extends 'base.html '%}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <hr>
+        first_number :- <input type="" name="num1" placeholder="Enter first number"><br><br>
+        second_number :- <input type="number" name="num2" placeholder="Enter second number"><br><br>
+        <button formaction="add">addition</button>
+        <button formaction="sub">substraction</button>
+        <button formaction="mult">multiplication</button>
+        <button formaction="div">division</button>
+        <hr>
+    </form>
+</body>
+</html>
+{% endblock %}
